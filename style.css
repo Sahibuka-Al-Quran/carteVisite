@@ -1,0 +1,75 @@
+/* === STYLE GLOBAL === */
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Playfair Display', serif;
+  background-color: #F9F7F1;
+  color: #3D3D3D;
+  text-align: center;
+}
+
+/* === TITRES === */
+h1, h2 {
+  font-weight: 600;
+  color: #2C3E2C;
+}
+
+/* === BOUTONS === */
+button {
+  background-color: #CAD2B0;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #B2C09F;
+}
+
+/* === FORMULAIRES === */
+input[type="email"] {
+  padding: 10px;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+form button {
+  margin-top: 1rem;
+  background-color: #3D3D3D;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+form button:hover {
+  background-color: #000;
+}
+
+/* === CONTAINERS === */
+#quiz-container, #options {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* === OPTIONS === */
+#options button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  background-color: #E7EAD9;
+}
+
+#options button:hover {
+  background-color: #D4DEC2;
+}

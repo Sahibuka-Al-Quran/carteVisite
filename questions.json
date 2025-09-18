@@ -1,0 +1,28 @@
+{
+  "debutant": [
+    {
+      "question": "Quelle est la première sourate du Coran ?",
+      "options": ["Al-Fatiha", "Al-Baqara", "An-Nas"],
+      "answer": "Al-Fatiha"
+    },
+    {
+      "question": "Combien de prières obligatoires chaque jour ?",
+      "options": ["3", "5", "7"],
+      "answer": "5"
+    }
+  ],
+  "intermediaire": [
+    {
+      "question": "Quel prophète a construit l’arche ?",
+      "options": ["Moussa", "Nouh", "Ibrahim"],
+      "answer": "Nouh"
+    }
+  ],
+  "avance": [
+    {
+      "question": "Quelle sourate contient le plus de versets ?",
+      "options": ["Al-Baqara", "Al-Imran", "Yasin"],
+      "answer": "Al-Baqara"
+    }
+  ]
+}
