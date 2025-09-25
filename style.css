@@ -73,3 +73,102 @@ form button:hover {
 #options button:hover {
   background-color: #D4DEC2;
 }
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #F9F7F1;
+  color: #3D3D3D;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+img.logo {
+  max-width: 200px;
+  width: 60%;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+}
+
+footer {
+  margin-top: 2rem;
+}
+/* === TITRES === */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2C3E2C;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* === CONTAINER D'ACCUEIL === */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Playfair Display', serif;
+  background-color: #F9F7F1;
+  color: #3D3D3D;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* === BOUTONS NIVEAUX === */
+button {
+  background-color: #CAD2B0;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 90%;
+  max-width: 300px;
+}
+
+/* === HOVER BOUTON === */
+button:hover {
+  background-color: #B2C09F;
+}
+
+/* === BOUTON BOUTIQUE === */
+.link-btn {
+  margin-top: 2rem;
+  background-color: #3D3D3D;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.link-btn:hover {
+  background-color: #000;
+}
+
+footer a {
+  display: inline-block;
+  background-color: #CAD2B0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+footer a:hover {
+  background-color: #B2C09F;
+}
