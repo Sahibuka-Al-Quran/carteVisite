@@ -144,3 +144,19 @@ button {
   -webkit-appearance: none;
   appearance: none;
 }
+/* === LOGO RESPONSIVE === */
+img.logo {
+  max-width: 180px;
+  width: 50%;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* Sur les petits écrans, on réduit encore un peu */
+@media (max-width: 480px) {
+  img.logo {
+    max-width: 140px;
+    width: 60%;
+  }
+}
