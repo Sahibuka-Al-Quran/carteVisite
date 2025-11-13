@@ -134,10 +134,11 @@ form button:hover {
 }
 
 /* === LIENS GLOBALS EXTENSION FIX — n'écrase plus les styles === */
-a, a * {
+/* Ne touche pas aux couleurs des boutons */
+a {
   text-decoration: none !important;
-  color: inherit !important;
 }
+
 
 /* ========================= */
 /* === LOGO RESPONSIVE ==== */
@@ -157,19 +158,25 @@ img.logo {
 }
 
 /* === BOUTON BOUTIQUE (footer) === */
+/* === BOUTON "Visiter la boutique" (même style que les autres) === */
 footer a {
   display: inline-block;
-  padding: 12px 25px;
+  background-color: #CAD2B0;
+  color: #000 !important;
+  padding: 12px 20px;
   border-radius: 8px;
-  border: 2px solid #2C3E2C;
-  background-color: transparent;
-  color: #2C3E2C;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none !important;
   transition: 0.3s ease;
 }
 
 footer a:hover {
-  background-color: #E7EAD9;
-  color: #000;
+  background-color: #B2C09F;
+}
+
+footer a {
+  border: 2px solid #2C3E2C !important;
+  background-color: transparent !important;
+  color: #2C3E2C !important;
 }
