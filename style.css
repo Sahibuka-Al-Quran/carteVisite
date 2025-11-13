@@ -135,15 +135,15 @@ button, button * {
   color: #000 !important;
 }
 
+button, button * {
+  color: #000 !important;
+}
+
 a, a * {
   color: #000 !important;
   text-decoration: none !important;
 }
 
-button {
-  -webkit-appearance: none;
-  appearance: none;
-}
 /* === LOGO RESPONSIVE === */
 img.logo {
   max-width: 180px;
@@ -159,4 +159,44 @@ img.logo {
     max-width: 140px;
     width: 60%;
   }
+}
+/* === LOGO === */
+img.logo {
+  max-width: 180px;
+  width: 50%;
+  height: auto;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+/* === VERSION MOBILE === */
+@media (max-width: 600px) {
+  img.logo {
+    max-width: 120px;
+    width: 40%;
+  }
+}
+/* === BOUTON BOUTIQUE === */
+footer a {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: 2px solid #2C3E2C;
+  background-color: transparent;
+  color: #2C3E2C;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: 0.3s ease;
+}
+
+footer a:hover {
+  background-color: #E7EAD9;
+  color: #000;
+}
+
+/* SUPPRIME le style global qui écrase tout */
+a, a * {
+  text-decoration: none !important;
+  color: inherit !important;
 }
