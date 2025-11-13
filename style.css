@@ -101,15 +101,24 @@ input[type="email"] {
   font-family: 'Playfair Display', serif;
 }
 
+/* === BOUTON VALIDER (même style que les réponses du quiz) === */
 form button {
-  margin-top: 1rem;
-  background-color: #3D3D3D;
-  color: #fff;
-  padding: 10px 20px;
+  background-color: #E7EAD9;
+  color: #000 !important;
+  border: none;
+  padding: 12px 20px;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 300px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 form button:hover {
-  background-color: #000;
+  background-color: #D4DEC2;
 }
 
 /* === QUIZ CONTAINERS === */
@@ -159,24 +168,25 @@ img.logo {
 
 /* === BOUTON BOUTIQUE (footer) === */
 /* === BOUTON "Visiter la boutique" (même style que les autres) === */
+/* === BOUTON "Visiter la boutique" (même style que les réponses) === */
 footer a {
-  display: inline-block;
-  background-color: #CAD2B0;
-  color: #000 !important;
+  display: block;
+  width: 90%;
+  max-width: 300px;
+  margin: 20px auto 40px auto;
   padding: 12px 20px;
+  background-color: #E7EAD9;
   border-radius: 8px;
+  color: #000 !important;
   font-size: 1rem;
+  text-align: center;
   font-family: 'Playfair Display', serif;
   text-decoration: none !important;
   transition: 0.3s ease;
 }
 
 footer a:hover {
-  background-color: #B2C09F;
+  background-color: #D4DEC2;
 }
 
-footer a {
-  border: 2px solid #2C3E2C !important;
-  background-color: transparent !important;
-  color: #2C3E2C !important;
-}
+
