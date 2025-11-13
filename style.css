@@ -65,13 +65,16 @@ button {
   transition: 0.3s ease;
   width: 90%;
   max-width: 300px;
+  color: #000 !important;              /* évite le texte bleu sur iPhone */
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 button:hover {
   background-color: #B2C09F;
 }
 
-/* === BOUTON BOUTIQUE === */
+/* === BOUTON BOUTIQUE SUR LA PAGE D'ACCUEIL === */
 .link-btn {
   margin-top: 2rem;
   background-color: #3D3D3D;
@@ -130,53 +133,30 @@ form button:hover {
   background-color: #D4DEC2;
 }
 
-/* === CORRECTION TEXTE BLEU MOBILE === */
-button, button * {
-  color: #000 !important;
-}
-
-button, button * {
-  color: #000 !important;
-}
-
+/* === LIENS GLOBALS EXTENSION FIX — n'écrase plus les styles === */
 a, a * {
-  color: #000 !important;
   text-decoration: none !important;
+  color: inherit !important;
 }
 
-/* === LOGO RESPONSIVE === */
+/* ========================= */
+/* === LOGO RESPONSIVE ==== */
+/* ========================= */
 img.logo {
-  max-width: 180px;
-  width: 50%;
-  height: auto;
-  margin: 1rem auto;
   display: block;
+  margin: 1.5rem auto 0 auto;
+  width: 150px;         /* taille propre PC */
+  max-width: 50%;
+  height: auto;
 }
 
-/* Sur les petits écrans, on réduit encore un peu */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   img.logo {
-    max-width: 140px;
-    width: 60%;
+    width: 130px;       /* version mobile */
   }
 }
-/* === LOGO === */
-img.logo {
-  max-width: 180px;
-  width: 50%;
-  height: auto;
-  margin: 1.5rem auto;
-  display: block;
-}
 
-/* === VERSION MOBILE === */
-@media (max-width: 600px) {
-  img.logo {
-    max-width: 120px;
-    width: 40%;
-  }
-}
-/* === BOUTON BOUTIQUE === */
+/* === BOUTON BOUTIQUE (footer) === */
 footer a {
   display: inline-block;
   padding: 12px 25px;
@@ -186,17 +166,10 @@ footer a {
   color: #2C3E2C;
   font-size: 1.2rem;
   font-weight: 600;
-  text-decoration: none !important;
   transition: 0.3s ease;
 }
 
 footer a:hover {
   background-color: #E7EAD9;
   color: #000;
-}
-
-/* SUPPRIME le style global qui écrase tout */
-a, a * {
-  text-decoration: none !important;
-  color: inherit !important;
 }
