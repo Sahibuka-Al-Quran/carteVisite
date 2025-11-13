@@ -1,26 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bravo !</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Générer un code promo aléatoire à chaque chargement
+    function generatePromoCode() {
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+      let code = "";
+      for (let i = 0; i < 6; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      document.getElementById("promo-code").textContent = code;
+      document.getElementById("hidden-code").value = code;
+    }
+    window.onload = generatePromoCode;
+  </script>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #FAF7F4;
+      color: #333;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2em;
+      color: #2E2B27;
+    }
+    h2 {
+      color: #3A7C57;
+      margin-top: 10px;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input[type="email"] {
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 300px;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #3A7C57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #2E5E42;
+    }
+    hr {
+      margin: 25px auto;
+      width: 50%;
+      border: 0;
+      border-top: 1px solid #ddd;
+    }
+  </style>
 </head>
 <body>
   <h1>🎉 Félicitations !</h1>
-  <p>Tu as bien répondu ! Voici ton code promo :</p>
+  <p>Tu as bien répondu au quiz ! Voici ton code promo :</p>
 
-  <h2 style="color: green;">APPREND5</h2>
-  <p>Valable sur ta prochaine commande, in sha Allah 💌</p>
+  <h2 id="promo-code"></h2>
+  <p>Valable sur ta prochaine commande, in shā’ Allāh 💌</p>
+
+  <p style="color: #777; font-size: 0.9em;">
+    📩 Note bien ton code quelque part pour ne pas l’oublier.
+  </p>
 
   <hr>
 
-  <p>Pour recevoir ton code promo par e-mail, entre ton adresse ici :</p>
+  <p>
+    Entre ton adresse e-mail (la même utilisée lors de ta commande) afin que nous puissions confirmer ta participation :
+  </p>
 
   <form action="https://formsubmit.co/sav.shbquran@gmail.com" method="POST">
     <input type="email" name="email" placeholder="Ton adresse e-mail" required>
-    <input type="hidden" name="code_promo" value="APPREND5">
+    <input type="hidden" id="hidden-code" name="code_promo" value="">
     <input type="hidden" name="_captcha" value="false">
-    <button type="submit">Envoyer le code</button>
+    <button type="submit">Valider</button>
   </form>
 </body>
 </html>

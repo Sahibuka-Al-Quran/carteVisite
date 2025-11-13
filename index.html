@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz découverte 📘</title>
+
   <link rel="stylesheet" href="style.css">  
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Bienvenue dans le Quiz 📖</h1>
-  <p>Choisis ton niveau (1 seul essai autorisé) :</p>
 
-  <button onclick="chooseLevel('debutant')">Débutant</button>
-  <button onclick="chooseLevel('intermediaire')">Intermédiaire</button>
-  <button onclick="chooseLevel('avance')">Avancé</button>
+  <div class="welcome-container">
 
-  <a href="https://sahibuka-al-quran.myshopify.com/" class="link-btn" target="_blank">Accéder à la boutique</a>
+    <h1>Bienvenue dans le Quiz 📖</h1>
+
+    <p class="rules-intro">
+      Réponds à <strong>une seule question</strong> pour tenter d’obtenir <strong>-5% sur ta prochaine commande</strong>.
+      <br><br>
+      Avant de commencer, voici quelques règles importantes :
+    </p>
+
+    <ul class="rules-list">
+      <li>• 1 seule tentative par personne</li>
+      <li>• Tu dois utiliser le même e-mail que celui de ta commande</li>
+      <li>• Le code obtenu est personnel (ne pas partager)</li>
+      <li>• Aucun minimum d’achat</li>
+      <li>• Si tu perds, tu ne peux pas recommencer</li>
+    </ul>
+
+    <p class="choose-level">Choisis ton niveau (1 seul essai autorisé) :</p>
+
+    <button onclick="chooseLevel('debutant')">Débutant</button>
+    <button onclick="chooseLevel('intermediaire')">Intermédiaire</button>
+    <button onclick="chooseLevel('avance')">Avancé</button>
+
+    <a href="https://sahibuka-al-quran.myshopify.com/" class="link-btn" target="_blank">
+      Accéder à la boutique
+    </a>
+
+  </div>
 
   <script src="main.js"></script>
-</body>
 
+</body>
 </html>

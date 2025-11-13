@@ -6,12 +6,51 @@ body {
   background-color: #F9F7F1;
   color: #3D3D3D;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.1rem;
+}
+
+/* === CONTENEUR PAGE ACCUEIL === */
+.welcome-container {
+  max-width: 600px;
+  width: 95%;
+  margin: auto;
 }
 
 /* === TITRES === */
-h1, h2 {
-  font-weight: 600;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
   color: #2C3E2C;
+}
+
+.rules-intro {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.rules-list {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem auto;
+  max-width: 400px;
+  font-size: 1.05rem;
+}
+
+.rules-list li {
+  margin: 8px 0;
+}
+
+.choose-level {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* === BOUTONS === */
@@ -19,16 +58,34 @@ button {
   background-color: #CAD2B0;
   border: none;
   padding: 12px 20px;
-  margin: 10px;
+  margin: 10px 0;
   border-radius: 8px;
   font-size: 1rem;
-  font-family: 'Playfair Display', serif;
   cursor: pointer;
   transition: 0.3s ease;
+  width: 90%;
+  max-width: 300px;
 }
 
 button:hover {
   background-color: #B2C09F;
+}
+
+/* === BOUTON BOUTIQUE === */
+.link-btn {
+  margin-top: 2rem;
+  background-color: #3D3D3D;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.link-btn:hover {
+  background-color: #000;
 }
 
 /* === FORMULAIRES === */
@@ -52,7 +109,7 @@ form button:hover {
   background-color: #000;
 }
 
-/* === CONTAINERS === */
+/* === QUIZ CONTAINERS === */
 #quiz-container, #options {
   max-width: 600px;
   margin: auto;
@@ -62,7 +119,6 @@ form button:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-/* === OPTIONS === */
 #options button {
   display: block;
   width: 100%;
@@ -74,101 +130,17 @@ form button:hover {
   background-color: #D4DEC2;
 }
 
-body {
-  font-family: 'Playfair Display', serif;
-  background-color: #F9F7F1;
-  color: #3D3D3D;
-  margin: 0;
-  padding: 1rem;
-  text-align: center;
-  font-size: 1.1rem;
+/* === CORRECTION TEXTE BLEU MOBILE === */
+button, button * {
+  color: #000 !important;
 }
 
-img.logo {
-  max-width: 200px;
-  width: 60%;
-  height: auto;
-  margin: 1rem auto;
-  display: block;
+a, a * {
+  color: #000 !important;
+  text-decoration: none !important;
 }
 
-footer {
-  margin-top: 2rem;
-}
-/* === TITRES === */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #2C3E2C;
-}
-
-p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-/* === CONTAINER D'ACCUEIL === */
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  font-family: 'Playfair Display', serif;
-  background-color: #F9F7F1;
-  color: #3D3D3D;
-  text-align: center;
-  min-height: 100vh;
-}
-
-/* === BOUTONS NIVEAUX === */
 button {
-  background-color: #CAD2B0;
-  border: none;
-  padding: 12px 20px;
-  margin: 10px 0;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: 'Playfair Display', serif;
-  cursor: pointer;
-  transition: 0.3s ease;
-  width: 90%;
-  max-width: 300px;
-}
-
-/* === HOVER BOUTON === */
-button:hover {
-  background-color: #B2C09F;
-}
-
-/* === BOUTON BOUTIQUE === */
-.link-btn {
-  margin-top: 2rem;
-  background-color: #3D3D3D;
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.link-btn:hover {
-  background-color: #000;
-}
-
-footer a {
-  display: inline-block;
-  background-color: #CAD2B0;
-  padding: 10px 20px;
-  border-radius: 8px;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-footer a:hover {
-  background-color: #B2C09F;
+  -webkit-appearance: none;
+  appearance: none;
 }
