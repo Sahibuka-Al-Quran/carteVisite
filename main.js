@@ -1,13 +1,14 @@
-// Empêche plus d'une participation
-function chooseLevel(level) {
+console.log("🎯 main.js chargé");
+
+// --- Fonction appelée depuis index.html ---
+function startQuiz() {
+
+    // ⛔ Si l’utilisateur a déjà joué, on bloque
     if (localStorage.getItem("quizDone") === "true") {
         window.location.href = "error.html";
         return;
     }
 
-    // Sauvegarde du niveau choisi
-    localStorage.setItem("selectedLevel", level);
-
-    // Redirection vers le quiz avec le niveau dans l'URL
-    window.location.href = "quiz.html?niveau=" + level;
+    // 👉 Sinon on lance le quiz
+    window.location.href = "quiz.html?niveau=quiz";
 }

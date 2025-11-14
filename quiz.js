@@ -1,23 +1,11 @@
 console.log("🎯 quiz.js chargé");
 
-// ---- Récupération du niveau depuis l'URL ----
-const params = new URLSearchParams(window.location.search);
-const level = params.get("niveau");
-
-// Si pas de niveau → erreur
-if (!level) {
-    document.addEventListener("DOMContentLoaded", () => {
-        document.getElementById("question-text").textContent = "Erreur : niveau non défini.";
-    });
-    throw new Error("Niveau absent");
-}
-
 // ---- Vérifie si déjà joué ----
 if (localStorage.getItem("quizDone") === "true") {
     window.location.href = "error.html";
 }
 
-// ---- Questions ----
+// ---- Toutes les questions (sans niveaux) ----
 const allQuestions = [
   {
     question: "Quel Prophète est mentionné le plus dans le Coran ?",
@@ -55,7 +43,7 @@ const allQuestions = [
     answer: "An-Nur"
   },
   {
-    question: "Quelle sourate est recommadée de réciter chaque vendredi selon la Sunna ?",
+    question: "Quelle sourate est recommandée de réciter le vendredi ?",
     options: ["Al-Waqi'ah", "Al-Kahf", "Ar-Rahman", "Al-Mulk", "Saba"],
     answer: "Al-Kahf"
   },
@@ -80,70 +68,45 @@ const allQuestions = [
     answer: "At-Tawbah"
   },
   {
-    question: "Quel Prophète est surnommé 'Kalim Allah' (celui à qui Allah a parlé) ?",
+    question: "Quel Prophète est surnommé 'Kalim Allah' ?",
     options: ["Ibrahim", "Moussa", "Issa", "Dawud", "Yunus"],
     answer: "Moussa"
   },
   {
-    question: "Quel prophète est avalé par un grand poisson selon le récit coranique ?",
+    question: "Quel Prophète a été avalé par un grand poisson ?",
     options: ["Yunus", "Yusuf", "Ibrahim", "Salih", "Lut"],
     answer: "Yunus"
   },
   {
-    question: "Quel est le Prophète qui a parlé le premier la langue arabe ?",
+    question: "Quel Prophète a parlé le premier la langue arabe ?",
     options: ["Adam", "Ibrahim", "Ismaïl", "Nuh", "Idris"],
-    answer: "Ismaïl" 
+    answer: "Ismaïl"
   },
   {
-    question: "Quels sont les deux Prophètes dont les épouses étaient mécréantes ?",
-    options: [
-      "Nuh et Lut",
-      "Ibrahim et Nuh",
-      "Lut et Salih",
-      "Moussa et Harun",
-      "Nuh et Yusuf"
-    ],
+    question: "Quels Prophètes avaient des épouses mécréantes ?",
+    options: ["Nuh et Lut", "Ibrahim et Nuh", "Lut et Salih", "Moussa et Harun", "Nuh et Yusuf"],
     answer: "Nuh et Lut"
   },
   {
-    question: "Quel est le Prophète qui est décédé mais qui n’est jamais né ?",
-    options: [
-      "Adam",
-      "Issa",
-      "Idris",
-      "Yunus",
-      "Moussa"
-    ],
+    question: "Quel Prophète est décédé mais n'est jamais né ?",
+    options: ["Adam", "Issa", "Idris", "Yunus", "Moussa"],
     answer: "Adam"
   },
   {
-    question: "Quel est le Prophète dont le père était mécréant ?",
-    options: [
-      "Issa",
-      "Ibrahim",
-      "Nuh",
-      "Yusuf",
-      "Idris"
-    ],
+    question: "Quel Prophète avait un père mécréant ?",
+    options: ["Issa", "Ibrahim", "Nuh", "Yusuf", "Idris"],
     answer: "Ibrahim"
   },
   {
     question: "De quelle tribu faisait partie Abu Bakr As-Siddiq ?",
-    options: [
-      "Quraysh",
-      "Aws",
-      "Khazraj",
-      "Banu Umayyah",
-      "Toutes les réponses"
-    ],
+    options: ["Quraysh", "Aws", "Khazraj", "Banu Umayyah", "Toutes les réponses"],
     answer: "Quraysh"
   }
 ];
 
-// ---- Sélection aléatoire d'une question ----
-const questions = allQuestions[level];
-const randomIndex = Math.floor(Math.random() * questions.length);
-const selected = questions[randomIndex];
+// ---- Sélection aléatoire ----
+const randomIndex = Math.floor(Math.random() * allQuestions.length);
+const selected = allQuestions[randomIndex];
 
 // ---- Affichage ----
 document.addEventListener("DOMContentLoaded", () => {
@@ -158,9 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ---- Vérification réponse ----
+// ---- Vérification ----
 function checkAnswer(selectedOption, correct) {
-  // Marque la participation comme utilisée
   localStorage.setItem("quizDone", "true");
 
   if (selectedOption === correct) {
